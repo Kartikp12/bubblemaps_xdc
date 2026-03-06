@@ -157,11 +157,6 @@ export function CytoscapeInner({ elements, onNodeSelect, selectedAddress }) {
     const node = cy.getElementById(selectedAddress.toLowerCase());
     if (node && node.nonempty()) {
       node.select();
-      cy.animate({
-        center: { eles: node },
-        zoom: 1.2,
-        duration: 500,
-      });
     }
   }, [selectedAddress]);
 
