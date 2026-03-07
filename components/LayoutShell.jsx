@@ -8,7 +8,9 @@ export function LayoutShell({ children }) {
         <div className="pointer-events-none absolute -top-20 right-10 h-60 w-60 rounded-full bg-sky-400/25 blur-3xl" />
         <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-fuchsia-500/20 blur-3xl" />
       </div>
-      <div className="relative z-10 flex min-h-screen flex-col">{children}</div>
+      <div className="relative z-10 flex min-h-screen flex-col overflow-x-hidden">
+        {children}
+      </div>
     </div>
   );
 }
